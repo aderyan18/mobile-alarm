@@ -17,8 +17,8 @@ const NavigationRoutes = () => {
     <View style={{ width: "100%", flex: 1 }}>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="SplashScreen" component={SplashScreen} />
+          <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Jadwal" component={Jadwal} />
           <Stack.Screen name="Setting" component={Setting} />

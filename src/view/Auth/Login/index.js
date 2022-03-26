@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React, { useEffect, useState } from "react";
-import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import {
   heightPercentageToDP as hp,
@@ -17,8 +16,10 @@ import {
 import { StackActions } from "@react-navigation/native";
 import { COLOR } from "../../../styles/color";
 import { TextInput } from "react-native-paper";
+import { useNavigation } from "@react-navigation/core";
 
 export default function Login() {
+  const navigation = useNavigation();
   const [pass, setPass] = useState("");
   const [icon, setIcon] = useState({
     icon: "eye",
@@ -104,7 +105,12 @@ export default function Login() {
           </View>
           {/* text input end */}
           {/* button submit start */}
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => {
+              navigation.navigate("Home");
+            }}
+          >
             <Text
               style={{
                 fontSize: hp(2),
