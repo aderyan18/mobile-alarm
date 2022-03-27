@@ -9,6 +9,7 @@ import Login from "../../view/Auth/Login";
 import Home from "../../view/Home";
 import Jadwal from "../../view/Jadwal";
 import Setting from "../../view/Setting";
+import AddCatatan from "../../view/AddCatatan";
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,7 @@ const NavigationRoutes = () => {
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Jadwal" component={Jadwal} />
           <Stack.Screen name="Setting" component={Setting} />
+          <Stack.Screen name="AddCatatan" component={AddCatatan} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>
